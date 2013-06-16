@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'bootstrap-sass'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,6 +20,20 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+
+group :test, :development do
+
+gem 'rspec', '~> 2.13.0'
+gem 'rspec-rails', '~> 2.13.2'
+gem 'annotate', '~> 2.5.0'
+gem 'haml-rails', '~> 0.4'
+gem 'haml', '~> 4.0.3'
+end
+
+group :development do
+gem 'annotate', '~> 2.5.0'
 end
 
 gem 'jquery-rails'
