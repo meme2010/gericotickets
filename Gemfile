@@ -36,6 +36,11 @@ group :development do
 gem 'annotate', '~> 2.5.0'
 end
 
+group :test do
+gem 'factory_girl', '~> 4.2.0'
+gem 'factory_girl_rails', '~> 4.2.1'
+end
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
