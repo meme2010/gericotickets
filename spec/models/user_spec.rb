@@ -33,10 +33,12 @@ describe User do
     before { @user.name = "a" * 51 }
     it { should_not be_valid }
   end
+  
   describe "when email is not present" do
     before { @user.email = " " }
     it { should_not be_valid }
   end
+
   describe "when email format is invalid" do
     it "should be invalid" do
       addresses = %w[meme2010@yahoo,com meme_2010.org meme.2010@yahoo.
@@ -57,6 +59,7 @@ describe User do
       end      
     end
   end
+
   describe "when email address is already taken" do
     before do
       user_with_same_email = @user.dup

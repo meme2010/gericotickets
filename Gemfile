@@ -34,6 +34,7 @@ end
 
 group :development do
 gem 'annotate', '~> 2.5.0'
+gem 'twitter-bootstrap-rails', '~> 2.2.7'
 end
 
 group :test do
@@ -42,6 +43,10 @@ gem 'factory_girl_rails', '~> 4.2.1'
 end
 
 gem 'jquery-rails'
+
+# Devise for user management
+gem 'devise'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
