@@ -1,5 +1,5 @@
 GericoTickets::Application.routes.draw do
-  resources :users
+  resources :users :events 
   get "users/new"
 
   # The priority is based upon order of creation:
