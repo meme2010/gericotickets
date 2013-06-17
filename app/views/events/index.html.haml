@@ -1,0 +1,19 @@
+%h1 Events#index
+%p Find me in app/views/events/index.html.haml
+
+%h1 Listing events
+%table
+  %tr
+    %th Titel
+    %th Text
+    %th Tickets
+    %th
+    %th
+  - @events.each do |event|
+    %tr
+      %td= event.titel
+      %td= event.text
+      %td= event.tickets
+      %td= link_to 'Show', event
+%br/
+
