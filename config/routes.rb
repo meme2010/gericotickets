@@ -1,4 +1,5 @@
 GericoTickets::Application.routes.draw do
+  root to: "events#index"
   resources :users, :events 
   get "users/new"
 
