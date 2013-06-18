@@ -2,7 +2,7 @@ class ShopCart < ActiveRecord::Base
 	attr_accessible :event_id, :user_id, :expires_at, :number_of_tickets, :user
 
   has_many :reservations
-  has_one :payment
+  has_one :payments
 
   validates :event_id,       :presence => true
   validates :user_id, :presence => true
