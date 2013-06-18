@@ -1,5 +1,3 @@
-%h1 Listing events
-  
 %table.table.table-striped
   %tbody
     %tr
@@ -7,13 +5,12 @@
       %td Description
       %td Number of tickets available
     %tr
-      %td= @event.title
+      %td= @reservation.title
       %td= @event.description
       %td= @event.number_of_tickets_available
       %td
         - if @event.tickets_available?
-          = link_to 'Reservation', :controller => "reservations", :action => "index"
+          = link_to 'Reservation', :controller => "reservations", :action => "show"
         - else
           not available
 %br/
-
