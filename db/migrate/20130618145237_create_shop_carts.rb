@@ -5,6 +5,7 @@ class CreateShopCarts < ActiveRecord::Migration
       t.integer :user_id
       t.datetime :expires_at
       t.integer :number_of_tickets
+      t.integer :reservation_id
       t.timestamps
     end
   end
