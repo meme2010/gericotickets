@@ -1,8 +1,7 @@
-class Reservation < ActiveRecord::Base
-  attr_accessible :event_id, :user_id, :expires_at, :number_of_tickets, :user
+class ShopCart < ActiveRecord::Base
+	attr_accessible :event_id, :user_id, :expires_at, :number_of_tickets, :user
 
-  belongs_to :event
-  belongs_to :user
+  has_many :reservations
   has_one :payment
 
   validates :event_id,       :presence => true
@@ -16,3 +15,4 @@ class Reservation < ActiveRecord::Base
 
   scope :valid, lambda { where("expires_at > ?", Time.zone.now ) }
 end
+
