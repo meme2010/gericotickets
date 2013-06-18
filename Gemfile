@@ -25,21 +25,22 @@ end
 
 group :test, :development do
 
-gem 'rspec', '~> 2.13.0'
-gem 'rspec-rails', '~> 2.13.2'
-gem 'annotate', '~> 2.5.0'
-gem 'haml-rails', '~> 0.4'
-gem 'haml', '~> 4.0.3'
+	gem 'rspec', '~> 2.13.0'
+	gem 'rspec-rails', '~> 2.13.2'
+	gem 'annotate', '~> 2.5.0'
+	gem 'haml-rails', '~> 0.4'
+	gem 'haml', '~> 4.0.3'
 end
 
 group :development do
-gem 'annotate', '~> 2.5.0'
-gem 'twitter-bootstrap-rails', '~> 2.2.7'
+	gem 'annotate', '~> 2.5.0'
+	gem 'twitter-bootstrap-rails', '~> 2.2.7'
 end
 
 group :test do
-gem 'factory_girl', '~> 4.2.0'
-gem 'factory_girl_rails', '~> 4.2.1'
+	gem 'factory_girl', '~> 4.2.0'
+	gem 'factory_girl_rails', '~> 4.2.1'
+	gem 'capybara', '~> 2.1.0'
 end
 
 gem 'jquery-rails'
