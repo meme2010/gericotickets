@@ -1,6 +1,7 @@
 %h1 Listing events
 %table.table.table-striped
   %tr
+    %th ID
     %th Titel
     %th Description
     %th Number of tickets available
@@ -8,6 +9,7 @@
     %th
   - @events.each do |event|
     %tr
+      %td= event.id
       %td= event.title
       %td= event.description
       %td= event.number_of_tickets_available

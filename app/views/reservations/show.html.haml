@@ -1,16 +1,14 @@
+%h1 Show reservation
+
 %table.table.table-striped
   %tbody
     %tr
       %td Title
       %td Description
-      %td Number of tickets available
+      %td Number of tickets
     %tr
-      %td= @reservation.title
-      %td= @event.description
-      %td= @event.number_of_tickets_available
-      %td
-        - if @event.tickets_available?
-          = link_to 'Reservation', :controller => "reservations", :action => "show"
-        - else
-          not available
+      %td= @reservation.event.title
+      %td= @reservation.event.description
+      %td= @reservation.number_of_tickets
+      %td betalen
 %br/

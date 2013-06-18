@@ -2,7 +2,9 @@ GericoTickets::Application.routes.draw do
   devise_for :users
 
   root to: "events#index"
-  resources :events, :reservations
+  resources :events do
+    resources :reservations
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

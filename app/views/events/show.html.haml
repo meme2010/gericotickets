@@ -11,8 +11,8 @@
       %td= @event.description
       %td= @event.number_of_tickets_available
       %td
-        - if @event.tickets_available?
-          = link_to 'Reservation', :controller => "reservations", :action => "index"
+        - if @event.tickets_available? && @event.tickets_available_for_user?(current_user)
+          = link_to "New reservation", new_event_reservation_path(@event)
         - else
           not available
 %br/

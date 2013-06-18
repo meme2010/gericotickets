@@ -1,16 +1,16 @@
-%h1 Reservation events
-
+%h1 Listing my reservations
 %table.table.table-striped
   %tr
-    %th Titel
-    %th Description
-    %th Number of tickets available
-    %th Order Tickets
+    %th ID
+    %th Title
+    %th Number of tickets
     %th
-  %tr
-    %td test
-    %td test
-    %td test
-    %td max 2 Tickets
+    %th
+  - @reservations.each do |reservation|
+    %tr
+      %td= reservation.id
+      %td= reservation.event.title
+      %td= reservation.number_of_tickets
+      %td= link_to 'Show', event_reservation_path(reservation.event, reservation)
 %br/
 
