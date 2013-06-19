@@ -10,5 +10,6 @@
       %td= @reservation.event.title
       %td= @reservation.event.description
       %td= @reservation.number_of_tickets
-      %td betalen
+      %td= link_to "betalen", :controller => :payments_controller, :action => :index
 %br/
+= link_to "Back", :controller => :events, :action => :index

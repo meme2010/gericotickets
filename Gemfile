@@ -30,6 +30,11 @@ group :test, :development do
 	gem 'annotate', '~> 2.5.0'
 	gem 'haml-rails', '~> 0.4'
 	gem 'haml', '~> 4.0.3'
+  gem 'luhn_validation'
+  gem 'sinatra', '~> 1.4.3'
+  gem 'braintree', '~> 2.23.0'
+  gem 'shotgun', '~> 0.9'
+  gem 'stripe', '~> 1.8.3'
 end
 
 group :development do
