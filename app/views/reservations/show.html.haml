@@ -10,6 +10,9 @@
       %td= @reservation.event.title
       %td= @reservation.event.description
       %td= @reservation.number_of_tickets
-      %td= link_to "betalen", :controller => :payments_controller, :action => :index
+      
 %br/
+%form{:action => "", :method => "POST"}
+  %script.stripe-button{"data-amount" => "2000", "data-description" => "2 widgets ($20.00)", "data-key" => "pk_test_czwzkTp2tactuLOEOqbMTRzG", "data-name" => "Gerico Tickets", :src => "https://checkout.stripe.com/v2/checkout.js"}
+
 = link_to "Back", :controller => :events, :action => :index

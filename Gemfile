@@ -34,7 +34,7 @@ group :test, :development do
   gem 'sinatra', '~> 1.4.3'
   gem 'braintree', '~> 2.23.0'
   gem 'shotgun', '~> 0.9'
-  gem 'stripe', '~> 1.8.3'
+  gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 end
 
 group :development do

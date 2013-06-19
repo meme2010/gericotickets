@@ -2,6 +2,7 @@ GericoTickets::Application.routes.draw do
   devise_for :users
 
   root to: "events#index"
+  resources :charges
   resources :payments_controller
   resources :events do
     resources :reservations
