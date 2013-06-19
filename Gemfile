@@ -48,6 +48,10 @@ group :test do
 	gem 'capybara', '~> 2.1.0'
 end
 
+group :production do
+  gem 'pg', '0.12.2'
+end
+
 gem 'jquery-rails'
 
 # Devise for user management
