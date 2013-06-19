@@ -10,8 +10,7 @@ class Reservation < ActiveRecord::Base
   validates :expires_at, :presence => true
   validates :number_of_tickets, :numericality => { :only_integer => true, :greater_than => 0, :less_than_or_equal_to => 2}
 
-  # as soon as we start a new reservation, make sure
-  # that the expires_at is set to 15 minutes from now.
+  #  expires_at is set to 15 minutes from now.
 
   after_initialize do |user|
     user.expires_at = 15.minutes.from_now
